@@ -13,5 +13,10 @@ describe('Test Utils Function', () => {
     await utils.sleep(2000);
     const end = dayjs().second();
     expect(end - start).toBe(2)
+  });
+
+  it('dataFormatYYYYMMDD', () => {
+    const data = utils.dataFormatYYYYMMDD(new Date().getTime());
+    expect(data).toBe(dayjs(new Date().getTime()).format('YYYY-MM-DD'))
   })
 })
