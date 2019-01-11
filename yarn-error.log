@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/xuzihao/.nvm/versions/node/v10.14.2/bin/node /usr/local/bin/yarn init
+  /Users/xuzihao/.nvm/versions/node/v10.14.2/bin/node /usr/local/bin/yarn add jest jest-ts -D
 
 PATH: 
   /Users/xuzihao/flutter/bin:/Users/xuzihao/.nvm/versions/node/v10.10.0/bin//usr/local/sbin:/Users/xuzihao/.nvm/versions/node/v10.14.2/bin:/Users/xuzihao/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/aria2/bin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/xuzihao/go/bin:/Users/xuzihao/go/bin:/Users/xuzihao/.cargo/bin:/Users/xuzihao/depot_tools
@@ -15,16 +15,20 @@ Platform:
 
 npm manifest: 
   {
-    "name": "own-Utils",
-    "version": "1.0.0",
+    "name": "zh-utils",
+    "version": "0.0.0",
     "main": "index.js",
     "repository": "git@github.com:Adherentman/own-Utils.git",
     "author": "徐梓昊 <adherentxu@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-      "lerna": "^3.10.5"
+      "lerna": "^3.10.5",
+      "typescript": "^3.2.2"
     },
-    "dependencies": {}
+    "dependencies": {
+      "tslib": "^1.9.3"
+    },
+    "private": true
   }
 
 yarn manifest: 
@@ -3673,7 +3677,7 @@ Lockfile:
     version "1.0.1"
     resolved "http://registry.npm.taobao.org/trim-off-newlines/download/trim-off-newlines-1.0.1.tgz#9f9ba9d9efa8764c387698bcbfeb2c848f11adb3"
   
-  tslib@^1.9.0:
+  tslib@^1.9.0, tslib@^1.9.3:
     version "1.9.3"
     resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   
@@ -3690,6 +3694,10 @@ Lockfile:
   typedarray@^0.0.6:
     version "0.0.6"
     resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+  
+  typescript@^3.2.2:
+    version "3.2.2"
+    resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.2.2.tgz#fe8101c46aa123f8353523ebdcf5730c2ae493e5"
   
   uglify-js@^3.1.4:
     version "3.4.9"
@@ -3897,14 +3905,14 @@ Lockfile:
       yargs-parser "^11.1.1"
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:119877:13)
-      at Interface.emit (events.js:182:13)
-      at Interface._ttyWrite (readline.js:783:16)
-      at ReadStream.onkeypress (readline.js:168:10)
-      at ReadStream.emit (events.js:182:13)
-      at emitKeys (internal/readline.js:424:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1022:36)
-      at ReadStream.emit (events.js:182:13)
-      at addChunk (_stream_readable.js:283:12)
+  Error: https://registry.npm.taobao.org/jest-ts: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:61779:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:121917:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:122900:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:122820:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1094:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
