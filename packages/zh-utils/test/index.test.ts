@@ -17,6 +17,6 @@ describe('Test Utils Function', () => {
 
   it('dataFormatYYYYMMDD', () => {
     const data = utils.dataFormatYYYYMMDD(new Date().getTime());
-    expect(data).toBe(dayjs(new Date().getTime()).format('YYYY-MM-DD'))
+    expect(data).toBe(dayjs(new Date().getTime()).format('YYYY-MM-DD'));
   })
 })

@@ -23,5 +23,4 @@ class ZhUtils {
     return dayjs(r).format("YYYY-MM-DD");
   };
 }
-
 export default ZhUtils;
