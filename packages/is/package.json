@@ -1,0 +1,16 @@
+{
+  "name": "is",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.umd.js",
+  "module":"lib/index.es5.js",
+  "files": ["lib"],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xzh",
+  "license": "MIT"
+}

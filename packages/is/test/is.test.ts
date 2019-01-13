@@ -1,4 +1,4 @@
-import isNumber from '../isNumber';
+import isNumber from '../src/isNumber';
 
 describe('isNumber', () => {
   it('test is number', () => {
@@ -31,11 +31,10 @@ describe('isNumber', () => {
       '10.10',
       '100',
       '5e3',
-      '   56\r\n  ', // issue#3
+      '   56\r\n  ',
   
       Math.LN2,
   
-      // 012, Octal literal not allowed in strict mode
       parseInt('012'),
       parseFloat('012'),
       Math.abs(1),
