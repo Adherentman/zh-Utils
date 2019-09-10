@@ -1,7 +1,7 @@
-import isNumber from '../src/isNumber';
+import isNumber from "../src/isNumber";
 
-describe('isNumber', () => {
-  it('test is number', () => {
+describe("isNumber", () => {
+  it("test is number", () => {
     let fixtures = [
       0xff,
       5e3,
@@ -11,32 +11,32 @@ describe('isNumber', () => {
       -1.1,
       37,
       3.14,
-  
+
       1,
       1.1,
       10,
       10.1,
       100,
       -100,
-  
-      '0.1',
-      '-0.1',
-      '-1.1',
-      '0',
-      '012',
-      '0xff',
-      '1',
-      '1.1',
-      '10',
-      '10.10',
-      '100',
-      '5e3',
-      '   56\r\n  ',
-  
+
+      "0.1",
+      "-0.1",
+      "-1.1",
+      "0",
+      "012",
+      "0xff",
+      "1",
+      "1.1",
+      "10",
+      "10.10",
+      "100",
+      "5e3",
+      "   56\r\n  ",
+
       Math.LN2,
-  
-      parseInt('012'),
-      parseFloat('012'),
+
+      parseInt("012"),
+      parseFloat("012"),
       Math.abs(1),
       Math.acos(1),
       Math.asin(1),
@@ -64,18 +64,18 @@ describe('isNumber', () => {
       Math.SQRT1_2,
       Math.SQRT2,
       Math.tan(1),
-  
+
       Number.MAX_VALUE,
       Number.MIN_VALUE,
-  
-      '0.0',
-      '0x0',
-      '0e+5',
-      '000',
-      '0.0e-5',
-      '0.0E5',
-  
-      +'',
+
+      "0.0",
+      "0x0",
+      "0e+5",
+      "000",
+      "0.0e-5",
+      "0.0E5",
+
+      +"",
       +1,
       +3.14,
       +37,
@@ -87,25 +87,25 @@ describe('isNumber', () => {
       +null!,
       +new Date()
     ];
-  
-    fixtures.forEach((num) => {
-      expect(isNumber(num)).toBe(true)
-    })
+
+    fixtures.forEach(num => {
+      expect(isNumber(num)).toBe(true);
+    });
   });
 
-  it('test is not number', () => {
-    let fixtures = [
-      '   ', // issue#3
-      '\r\n\t', // issue#3
-      '',
-      '',
-      '3a',
-      'abc',
-      'false',
-      'null',
-      'true',
-      'undefined',
-      +'abc',
+  it("test is not number", () => {
+    let fixtures: any = [
+      "   ", // issue#3
+      "\r\n\t", // issue#3
+      "",
+      "",
+      "3a",
+      "abc",
+      "false",
+      "null",
+      "true",
+      "undefined",
+      +"abc",
       +/foo/,
       +[1, 2, 4],
       +Infinity,
@@ -131,8 +131,8 @@ describe('isNumber', () => {
       undefined,
       {}
     ];
-    fixtures.forEach((num) => {
-      expect(isNumber(num)).toBe(false)
-    })
-  })
-})
+    fixtures.forEach((num: any) => {
+      expect(isNumber(num)).toBe(false);
+    });
+  });
+});
